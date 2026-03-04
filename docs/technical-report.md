@@ -148,3 +148,5 @@ At scale, 1,000,000 queries per month against the processed table costs \$4.50 c
 - Apply AWS cost allocation tags to all resources for granular billing visibility
 - Extend pipeline to support additional datasets using the same architecture pattern
 EOF
+- Implement Amazon QuickSight dashboard connected to Athena for self-service BI, 
+- visualizing monthly case trends, vaccination progress by continent, and death rate by country
