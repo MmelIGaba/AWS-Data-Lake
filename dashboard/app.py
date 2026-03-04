@@ -14,17 +14,29 @@ st.title("COVID-19 Data Lake Dashboard")
 st.markdown("Powered by Amazon Athena and AWS Glue Data Lake")
 st.divider()
 
+client = boto3.client(
+    "athena",
+    region_name=st.secrets["aws"]["aws_default_region"],
+    aws_access_key_id=st.secrets["aws"]["aws_access_key_id"],
+    aws_secret_access_key=st.secrets["aws"]["aws_secret_access_key"]
+)
 @st.cache_data(ttl=300, show_spinner=False)
 def run_athena_query(query, database="datalake_db", workgroup="covid19-workgroup"):
-    client = boto3.client("athena", region_name="us-east-1")
-    execution_id = client.start_query_execution(
+    athena = boto3.client(
+        "athena",
+        region_name=st.secrets["aws"]["aws_default_region"],
+        aws_access_key_id=st.secrets["aws"]["aws_access_key_id"],
+        aws_secret_access_key=st.secrets["aws"]["aws_secret_access_key"]
+    )
+    
+    execution_id = athena.start_query_execution(
         QueryString=query,
         QueryExecutionContext={"Database": database},
         WorkGroup=workgroup
     )["QueryExecutionId"]
 
     while True:
-        status = client.get_query_execution(
+        status = athena.get_query_execution(
             QueryExecutionId=execution_id
         )["QueryExecution"]["Status"]["State"]
         if status in ["SUCCEEDED", "FAILED", "CANCELLED"]:
@@ -35,7 +47,7 @@ def run_athena_query(query, database="datalake_db", workgroup="covid19-workgroup
         st.error(f"Athena query failed: {status}")
         return pd.DataFrame()
 
-    results = client.get_query_results(QueryExecutionId=execution_id)
+    results = athena.get_query_results(QueryExecutionId=execution_id)
     rows = results["ResultSet"]["Rows"]
     headers = [col.get("VarCharValue", "") for col in rows[0]["Data"]]
     data = [[col.get("VarCharValue", None) for col in row["Data"]] for row in rows[1:]]
