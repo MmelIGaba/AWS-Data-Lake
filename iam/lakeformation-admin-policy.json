@@ -1,0 +1,29 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "LakeFormationFullAccess",
+      "Effect": "Allow",
+      "Action": [
+        "lakeformation:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "GlueCatalogScopedAccess",
+      "Effect": "Allow",
+      "Action": [
+        "glue:GetDatabase",
+        "glue:GetDatabases",
+        "glue:CreateDatabase",
+        "glue:UpdateDatabase",
+        "glue:GetTable",
+        "glue:GetTables",
+        "glue:CreateTable",
+        "glue:UpdateTable",
+        "glue:DeleteTable"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

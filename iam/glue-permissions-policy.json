@@ -1,0 +1,51 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "RawBucketReadAccess",
+      "Effect": "Allow",
+      "Action": [
+        "s3:ListBucket"
+      ],
+      "Resource": [
+        "arn:aws:s3:::covid19-bucket-1-mmela"
+      ],
+      "Condition": {
+        "StringLike": {
+          "s3:prefix": [
+            "raw/*"
+          ]
+        }
+      }
+    },
+    {
+      "Sid": "RawBucketObjects",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::covid19-bucket-1-mmela/raw/*"
+      ]
+    },
+    {
+      "Sid": "ProcessedBucketWriteAccess",
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:DeleteObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::covid19-bucket-1-mmela/processed/*"
+      ]
+    },
+    {
+      "Sid": "GlueCatalogAccess",
+      "Effect": "Allow",
+      "Action": [
+        "glue:*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

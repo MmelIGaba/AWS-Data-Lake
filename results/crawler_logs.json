@@ -1,0 +1,23 @@
+[
+    "[d5a27458-bf45-4a06-8c89-5ca4f818d5ce] BENCHMARK : Running Start Crawl for Crawler covid19-processed-crawler",
+    "[d5a27458-bf45-4a06-8c89-5ca4f818d5ce] BENCHMARK : Classification complete, writing results to database datalake_db",
+    "[d5a27458-bf45-4a06-8c89-5ca4f818d5ce] INFO : Crawler configured with SchemaChangePolicy {\"UpdateBehavior\":\"UPDATE_IN_DATABASE\",\"DeleteBehavior\":\"DEPRECATE_IN_DATABASE\"}.",
+    "[d5a27458-bf45-4a06-8c89-5ca4f818d5ce] ERROR : Insufficient Lake Formation permission(s) on s3://covid19-bucket-1-mmela/processed/ (Database name: datalake_db, Table name: processed) (Service: AWSGlue; Status Code: 400; Error Code: AccessDeniedException; Request ID: f2751f76-0e72-4624-925e-ad32d98b66a5; Proxy: null). For more information, see Setting up IAM Permissions in the Developer Guide (http://docs.aws.amazon.com/glue/latest/dg/getting-started-access.html).",
+    "[d5a27458-bf45-4a06-8c89-5ca4f818d5ce] BENCHMARK : Crawler has finished running and is in state READY",
+    "[7a8f3780-550b-4583-bd75-d484ac891698] BENCHMARK : Running Start Crawl for Crawler covid19-processed-crawler",
+    "[7a8f3780-550b-4583-bd75-d484ac891698] BENCHMARK : Classification complete, writing results to database datalake_db",
+    "[7a8f3780-550b-4583-bd75-d484ac891698] INFO : Crawler configured with SchemaChangePolicy {\"UpdateBehavior\":\"UPDATE_IN_DATABASE\",\"DeleteBehavior\":\"DEPRECATE_IN_DATABASE\"}.",
+    "[7a8f3780-550b-4583-bd75-d484ac891698] ERROR : Insufficient Lake Formation permission(s) on s3://covid19-bucket-1-mmela/processed/ (Database name: datalake_db, Table name: processed) (Service: AWSGlue; Status Code: 400; Error Code: AccessDeniedException; Request ID: 1445a59a-4348-42c4-8822-f01af345058c; Proxy: null). For more information, see Setting up IAM Permissions in the Developer Guide (http://docs.aws.amazon.com/glue/latest/dg/getting-started-access.html).",
+    "[7a8f3780-550b-4583-bd75-d484ac891698] BENCHMARK : Crawler has finished running and is in state READY",
+    "[d1d4af21-b392-48e5-a4b2-a91cad4f3524] BENCHMARK : Running Start Crawl for Crawler covid19-processed-crawler",
+    "[d1d4af21-b392-48e5-a4b2-a91cad4f3524] BENCHMARK : Classification complete, writing results to database datalake_db",
+    "[d1d4af21-b392-48e5-a4b2-a91cad4f3524] INFO : Crawler configured with SchemaChangePolicy {\"UpdateBehavior\":\"UPDATE_IN_DATABASE\",\"DeleteBehavior\":\"DEPRECATE_IN_DATABASE\"}.",
+    "[d1d4af21-b392-48e5-a4b2-a91cad4f3524] INFO : Created table processed in database datalake_db",
+    "[d1d4af21-b392-48e5-a4b2-a91cad4f3524] INFO : Created partitions with values [[2020, 1], [2020, 10], [2020, 11], [2020, 12], [2020, 2], [2020, 3], [2020, 4], [2020, 5], [2020, 6], [2020, 7], [2020, 8], [2020, 9], [2021, 1], [2021, 10], [2021, 11], [2021, 12], [2021, 2], [2021, 3], [2021, 4], [2021, 5], [2021, 6], [2021, 7], [2021, 8], [2021, 9], [2022, 1], [2022, 2], [2022, 3]] for table processed in database datalake_db",
+    "[d1d4af21-b392-48e5-a4b2-a91cad4f3524] BENCHMARK : Finished writing to Catalog",
+    "[d1d4af21-b392-48e5-a4b2-a91cad4f3524] INFO : Run Summary For PARTITION:",
+    "[d1d4af21-b392-48e5-a4b2-a91cad4f3524] INFO : ADD: 27",
+    "[d1d4af21-b392-48e5-a4b2-a91cad4f3524] INFO : Run Summary For TABLE:",
+    "[d1d4af21-b392-48e5-a4b2-a91cad4f3524] INFO : ADD: 1",
+    "[d1d4af21-b392-48e5-a4b2-a91cad4f3524] BENCHMARK : Crawler has finished running and is in state READY"
+]

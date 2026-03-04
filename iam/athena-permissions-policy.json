@@ -1,0 +1,29 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ProcessedBucketReadAccess",
+      "Effect": "Allow",
+      "Action": [
+        "s3:GetObject",
+        "s3:ListBucket"
+      ],
+      "Resource": [
+        "arn:aws:s3:::covid19-bucket-1-mmela",
+        "arn:aws:s3:::covid19-bucket-1-mmela/processed/*"
+      ]
+    },
+    {
+      "Sid": "AthenaResultsWriteAccess",
+      "Effect": "Allow",
+      "Action": [
+        "s3:PutObject",
+        "s3:GetObject",
+        "s3:DeleteObject"
+      ],
+      "Resource": [
+        "arn:aws:s3:::covid19-bucket-1-mmela/athena-results/*"
+      ]
+    }
+  ]
+}

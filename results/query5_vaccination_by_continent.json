@@ -1,0 +1,30 @@
+[
+    [
+        "continent",
+        "fully_vaccinated_pct"
+    ],
+    [
+        "Europe",
+        "121.45"
+    ],
+    [
+        "Oceania",
+        "100.0"
+    ],
+    [
+        "Asia",
+        "95.23"
+    ],
+    [
+        "South America",
+        "89.83"
+    ],
+    [
+        "North America",
+        "89.82"
+    ],
+    [
+        "Africa",
+        "80.7"
+    ]
+]
